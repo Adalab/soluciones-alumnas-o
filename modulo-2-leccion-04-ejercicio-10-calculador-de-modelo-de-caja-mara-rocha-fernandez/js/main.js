@@ -18,8 +18,8 @@ function boxModelCalculator(borderBox, width, padding, borderWidth) {
     */
 
     // versión 2: condicional ternario
-    let contentWidth = borderBox ? (width - padding * 2 - borderWidth * 2) : width;
-    let totalWidth = borderBox ? width : (width + padding * 2 + borderWidth * 2);
+    const contentWidth = borderBox ? (width - padding * 2 - borderWidth * 2) : width;
+    const totalWidth = borderBox ? width : (width + padding * 2 + borderWidth * 2);
 
     // devolver resultado en cadena de texto
     return `El ancho del contenido es: ${contentWidth} y el ancho total de la caja es: ${totalWidth}.`;
@@ -37,8 +37,8 @@ console.log(boxB);
 
 // función anterior transformada en función arrow
 const boxModelCalculatorArrowFunction = (borderBox, width, padding, borderWidth) => {
-    let contentWidth = borderBox ? (width - padding * 2 - borderWidth * 2) : width;
-    let totalWidth = borderBox ? width : (width + padding * 2 + borderWidth * 2);
+    const contentWidth = borderBox ? (width - padding * 2 - borderWidth * 2) : width;
+    const totalWidth = borderBox ? width : (width + padding * 2 + borderWidth * 2);
     return `El ancho del contenido es: ${contentWidth} y el ancho total de la caja es: ${totalWidth}.`;
 }
 
