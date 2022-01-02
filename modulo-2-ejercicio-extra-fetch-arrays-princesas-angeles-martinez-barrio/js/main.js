@@ -12,10 +12,8 @@ const favList = document.querySelector(".js-fav-list");
 let princessArray = [];
 let princessFavArray = [];
 
-// Petición fetch para traer listado de princesas al cargar la página
-fetch(
-  "https://beta.adalab.es/ejercicios-extra/js-fetch-arrays-princesas-disney/data/users.json"
-)
+// Petición fetch para traer listado de princesas al cargar la página de nuestra api local
+fetch("./api/data.json")
   .then((response) => response.json())
   .then((data) => {
     // Verificamos qué contiene la respuesta data
@@ -50,11 +48,7 @@ function renderArticle() {
 function renderImg(princess, div) {
   const img = document.createElement("img");
   img.classList.add("img");
-  // Arreglamos enlace roto del json
-  img.src = princess.picture.replace(
-    "ejercicio-fin-de-semana-promo-j",
-    "ejercicios-extra/js-fetch-arrays-princesas-disney"
-  );
+  img.src = princess.picture;
   div.appendChild(img);
 }
 
